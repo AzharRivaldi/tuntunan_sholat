@@ -2,6 +2,7 @@ Tutorial Membuat Aplikasi Tuntunan Shalat dengan Flutter
 
 # Tutorial Build with Android Studio
 PART 1 https://youtu.be/gEK50pzctN8
+PART 2 https://youtu.be/uoJYrbpwdeI
 
 # Tutorial Build with Step by Step
 https://rivaldi48.blogspot.com/2024/05/tutorial-membuat-aplikasi-tuntunan-shalat-dengan-flutter.html
