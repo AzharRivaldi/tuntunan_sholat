@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tuntunan_sholat/page_home/model_home.dart';
+import 'package:tuntunan_sholat/page_shalat_fardu/page_shalat_fardu.dart';
+import 'package:tuntunan_sholat/page_shalat_sunnah/page_shalat_sunnah.dart';
 import 'package:tuntunan_sholat/page_tayammum/page_tayammum.dart';
 import 'package:tuntunan_sholat/page_wudhu/page_wudhu.dart';
 
@@ -11,6 +13,8 @@ class HomePage extends StatelessWidget {
     const List<ModelHome> modelHome = <ModelHome>[
       ModelHome(title: 'Wudhu', icon: Icons.clean_hands_outlined),
       ModelHome(title: 'Tayammum', icon: Icons.front_hand_outlined),
+      ModelHome(title: 'Shalat Fardu', icon: Icons.man),
+      ModelHome(title: 'Shalat Sunnah', icon: Icons.man),
     ];
 
     return Scaffold(
@@ -55,6 +59,14 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const TayammumPage()));
+                } else if (items.title == 'Shalat Fardu') {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ShalatFarduPage()));
+                } else if (items.title == 'Shalat Sunnah') {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ShalatSunnahPage()));
                 }
               },
               child: Card(
