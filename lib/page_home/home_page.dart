@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tuntunan_sholat/page_home/model_home.dart';
+import 'package:tuntunan_sholat/page_qashar_jamak/page_qashar_jamak.dart';
 import 'package:tuntunan_sholat/page_shalat_fardu/page_shalat_fardu.dart';
 import 'package:tuntunan_sholat/page_shalat_sunnah/page_shalat_sunnah.dart';
+import 'package:tuntunan_sholat/page_sick/page_shalat_saat_sakit.dart';
 import 'package:tuntunan_sholat/page_tayammum/page_tayammum.dart';
 import 'package:tuntunan_sholat/page_wudhu/page_wudhu.dart';
 
@@ -15,6 +17,8 @@ class HomePage extends StatelessWidget {
       ModelHome(title: 'Tayammum', icon: Icons.front_hand_outlined),
       ModelHome(title: 'Shalat Fardu', icon: Icons.man),
       ModelHome(title: 'Shalat Sunnah', icon: Icons.man),
+      ModelHome(title: 'Shalat Qashar dan Jamak', icon: Icons.access_time_outlined),
+      ModelHome(title: 'Shalat Saat Sakit', icon: Icons.sick_outlined),
     ];
 
     return Scaffold(
@@ -67,6 +71,14 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const ShalatSunnahPage()));
+                } else if (items.title == 'Shalat Qashar dan Jamak') {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const QasharJamakPage()));
+                } else if (items.title == 'Shalat Saat Sakit') {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ShalatSaatSakitPage()));
                 }
               },
               child: Card(
